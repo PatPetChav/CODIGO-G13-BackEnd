@@ -3,7 +3,7 @@ from flask import Flask,request
 #creamos objeto de la clase Flask
 app = Flask(__name__)
 
-#creamis mi priemera ruta
+#creamos mi primera ruta
 @app.route("/")
 def index():
     return "<center><h1>HOLA MUNDO FLASK</h1></center>"
