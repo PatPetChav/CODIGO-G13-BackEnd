@@ -74,12 +74,17 @@ def portafolio():
 
 
     context = {
-        'proyectos':lstProyectos
+        'proyectos':lstProyectos,
+        'biografia':dicBiografia
     }
     return render_template('portafolio.html',**context)
 
 @app.route('/contacto')
 def contacto():
-    return render_template('contacto.html')
+
+    context = {
+        'biografia':dicBiografia
+    }
+    return render_template('contacto.html',**context)
 
 app.run(debug=True)
