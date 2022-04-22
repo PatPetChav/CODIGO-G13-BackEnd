@@ -13,12 +13,13 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">{{ biografia['descripcion']}}</p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead"><img class="masthead-avatar mb-5" src="{{ session.biografia['foto'] }}" alt="..." /></p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead">{{ session.biografia['descripcion']}}</p></div>
                     
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="{{ biografia['url_CV']}}">
+                    <a class="btn btn-xl btn-outline-light" href="{{ session.biografia['url_CV']}}">
                         <i class="fas fa-download me-2"></i>
                         Descargar CV!
                     </a>
