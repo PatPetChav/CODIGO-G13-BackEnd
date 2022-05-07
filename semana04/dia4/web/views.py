@@ -6,7 +6,6 @@ from .models import Categoria,Producto
 
 # Create your views here.
 def index(request):
-    request.session['titulo'] = "MODA DJANGO"
     listaProductos = Producto.objects.all()
     listaCategorias = Categoria.objects.all()
     context = {
@@ -45,4 +44,20 @@ def agregarCarrito(request,producto_id):
     carritoProducto.add(objProducto,1)
     print(request.session.get("cart"))
     
+    return render(request,'carrito.html')
+
+def eliminarProductoCarrito(request,producto_id):
+    """
+    funcion que elimina un producto del carrito de compras
+    """
+    objProducto = Producto.objects.get(id=producto_id)
+    carritoProducto = Cart(request)
+    carritoProducto.delete(objProducto)
+    
+    return render(request,'carrito.html')
+
+def limpiarCarrito(request):
+    carritoProducto = Cart(request)
+    carritoProducto.clear()
+
     return render(request,'carrito.html')
