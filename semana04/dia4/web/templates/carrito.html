@@ -49,7 +49,7 @@ No Space
                         <p class="prod-li-rating-count">12</p>
                     </div>
                     <p class="prod-li-add">
-                        <a href="{% url 'web:eliminarProductoCarrito' value.producto_id %}" class="button hover-label prod-addbtn"><i class="icon ion-close-round"></i><span>Remove</span></a>
+                        <a href="{% url 'web:eliminarProductoCarrito' value.producto_id %}" class="button hover-label prod-addbtn"><i class="icon ion-close-round"></i><span>Eliminar</span></a>
                     </p>
                     <p class="prod-li-compare">
                         <a href="compare.html" class="hover-label prod-li-compare-btn"><span>Compare</span><i class="icon ion-arrow-swap"></i></a>
@@ -93,8 +93,8 @@ No Space
             <input type="submit" class="button" value="Apply">
         </div>
         <div class="cart-collaterals">
-            <a href="{% url 'web:limpiarCarrito' %}" class="checkout-button button">LIMPIAR CARRITO</a>
-            <a href="#" class="checkout-button button">Proceed to checkout</a>
+            <a href="{% url 'web:limpiarCarrito' %}" class="checkout-button button">Limpiar Carrito</a>
+            <a href="{% url 'web:registrarPedido' %}" class="checkout-button button">Realizar Pedido</a>
             <div class="order-total">
                 <p class="cart-totals-ttl">Total</p>
                 <p class="cart-totals-val">${{ request.session.cartMontoTotal }}</p>
@@ -105,4 +105,4 @@ No Space
 
 </div>
 
-{% endblock %}
+{% endblock %
