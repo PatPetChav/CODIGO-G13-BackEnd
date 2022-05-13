@@ -1,5 +1,0 @@
-JavaScript,Dante Ruiz
-Introduccion a Redes,Benedicto Vilca
-Inteligencia Artificial,Javier Alfaro
-Teoria de Juegos,Carlos Maldonado
-Programacion Matematica,Luis Perez
