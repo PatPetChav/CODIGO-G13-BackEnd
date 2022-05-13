@@ -26,5 +26,5 @@ const App = () => {
 		</Router>
 	);
 };
-
+// aqui un comentario
 export default App;
