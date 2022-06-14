@@ -35,7 +35,7 @@ class CategoriaView(APIView):
 class ProductoView(APIView):
 
     def get(self,request):
-        dataProducto = Producto.objects.filter(precio = 10).all
+        dataProducto = Producto.objects.all()
         serProducto = ProductoSerializer(dataProducto,many=True)
         context = {
             'status':True,
